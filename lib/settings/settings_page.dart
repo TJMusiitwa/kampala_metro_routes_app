@@ -13,7 +13,8 @@ class SettingsPage extends StatelessWidget {
         title: Text('Settings'),
         automaticallyImplyLeading: true,
       ),
-      body: Padding(
+      iosContentPadding: true,
+      body: SingleChildScrollView(
         padding: const EdgeInsets.symmetric(vertical: 15.0, horizontal: 10.0),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,

@@ -21,7 +21,15 @@ class _RoutesPageState extends State<RoutesPage>
     6: Text('Others'),
   };
 
-  final Map<int, Widget> cupertinoContent = const <int, Widget>{};
+  final Map<int, Widget> cupertinoContent = const <int, Widget>{
+    0: Text('Old Taxi Park'),
+    1: Text('New Taxi Park'),
+    2: Text('Usafi Taxi Park'),
+    3: Text('City Square'),
+    4: Text('Wandegeya'),
+    5: Text('Nateete'),
+    6: Text('Others'),
+  };
 
   @override
   Widget build(BuildContext context) {
@@ -42,7 +50,15 @@ class _RoutesPageState extends State<RoutesPage>
                   Tab(text: 'Others'),
                 ]),
           ),
-          body: TabBarView(children: [])),
+          body: TabBarView(controller: _materialTabController, children: [
+            Text('Old Taxi Park'),
+            Text('New Taxi Park'),
+            Text('Usafi Taxi Park'),
+            Text('City Square'),
+            Text('Wandegeya'),
+            Text('Nateete'),
+            Text('Others'),
+          ])),
       cupertino: (context, platform) => CupertinoPageScaffoldData(
         navigationBar: CupertinoNavigationBar(middle: Text('Routes')),
         body: SafeArea(

@@ -20,9 +20,13 @@ class _MetroNavState extends State<MetroNav> {
       bottomNavBar: PlatformNavBar(
         currentIndex: _currentPage,
         items: [
-          BottomNavigationBarItem(icon: Icon(context.platformIcons.bus)),
-          BottomNavigationBarItem(icon: Icon(context.platformIcons.home)),
-          BottomNavigationBarItem(icon: Icon(context.platformIcons.settings)),
+          BottomNavigationBarItem(
+              icon: Icon(context.platformIcons.bus), title: Text('Routes')),
+          BottomNavigationBarItem(
+              icon: Icon(context.platformIcons.home), title: Text('Map')),
+          BottomNavigationBarItem(
+              icon: Icon(context.platformIcons.settings),
+              title: Text('Settings')),
         ],
         itemChanged: (index) => setState(() => _currentPage = index),
       ),

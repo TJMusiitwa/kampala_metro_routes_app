@@ -22,10 +22,15 @@ class MyApp extends StatelessWidget {
       builder: (_) => PlatformApp(
         title: 'Kampala Metro Routes',
         home: MetroNav(),
+        localizationsDelegates: <LocalizationsDelegate<dynamic>>[
+          DefaultMaterialLocalizations.delegate,
+          DefaultWidgetsLocalizations.delegate,
+          DefaultCupertinoLocalizations.delegate,
+        ],
         material: (_, __) => MaterialAppData(
             theme: ThemeData.light().copyWith(
               visualDensity: VisualDensity.adaptivePlatformDensity,
-              primaryColor: Colors.white,
+              primaryColor: Colors.teal,
               accentColor: Colors.black,
             ),
             darkTheme: ThemeData.dark().copyWith(
@@ -36,7 +41,7 @@ class MyApp extends StatelessWidget {
         cupertino: (_, __) => CupertinoAppData(
             theme: CupertinoThemeData(
                 primaryColor: CupertinoDynamicColor.withBrightness(
-                    color: CupertinoColors.systemBlue,
+                    color: CupertinoColors.systemTeal,
                     darkColor: CupertinoColors.systemBlue))),
       ),
     );
